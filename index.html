@@ -1,997 +1,1472 @@
-<!-- ===== NIKTO TOOLS BOOK POST - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikto Tools — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 36px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-    }
-    
-    .post-title-cyber strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 28px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 24px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 20px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #00ff88;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
-        }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #00ff88, #00cc77);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h1 {
-        color: #ffffff !important;
-        font-size: 36px;
-        font-weight: 900;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h4 {
-        color: #00ff88 !important;
-        font-size: 22px;
-        font-weight: 700;
-        margin: 30px 0 14px;
-    }
-    
-    .cyber-post-wrapper h5 {
-        color: #ffcc00 !important;
-        font-size: 19px;
-        font-weight: 700;
-        margin: 25px 0 12px;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h1 {
-            font-size: 28px;
-        }
-        .cyber-post-wrapper h4 {
-            font-size: 19px;
-        }
-        .cyber-post-wrapper h5 {
-            font-size: 17px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h1 {
-            font-size: 22px;
-        }
-        .cyber-post-wrapper h4 {
-            font-size: 17px;
-        }
-        .cyber-post-wrapper h5 {
-            font-size: 15px;
-        }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
-            font-size: 15px;
-            line-height: 1.8;
-            margin: 14px 0 16px;
-        }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    .cyber-post-wrapper ol {
-        counter-reset: item;
-    }
-    
-    .cyber-post-wrapper ol li {
-        counter-increment: item;
-        padding-left: 35px;
-    }
-    
-    .cyber-post-wrapper ol li::before {
-        content: counter(item) ".";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 16px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
-        }
-        .cyber-post-wrapper ul li {
-            padding-left: 24px;
-        }
-        .cyber-post-wrapper ol li {
-            padding-left: 30px;
-        }
-    }
-    
-    /* ===== CODE BLOCKS ===== */
-    .code-block {
-        margin: 16px 0 24px;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .code-header {
-        background: #0d0d0d !important;
-        padding: 12px 20px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.06);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .code-header span:first-child {
-        color: #00ff88 !important;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .code-header span:last-child {
-        color: #6a7290 !important;
-        font-size: 12px;
-    }
-    
-    .code-block pre {
-        background: #000000 !important;
-        padding: 22px 24px;
-        border-radius: 0;
-        overflow-x: auto;
-        margin: 0;
-        border: none;
-    }
-    
-    .code-block pre code {
-        color: #b0b8c8 !important;
-        font-family: 'Courier New', 'Consolas', monospace;
-        font-size: 15px;
-        line-height: 1.9;
-        background: transparent !important;
-        white-space: pre-wrap;
-        word-break: break-all;
-    }
-    
-    .code-block pre code .cmd {
-        color: #00ff88;
-    }
-    .code-block pre code .flag {
-        color: #ffcc00;
-    }
-    .code-block pre code .target {
-        color: #00d9ff;
-    }
-    .code-block pre code .output {
-        color: #00d9ff;
-    }
-    .code-block pre code .comment {
-        color: #6a7290;
-        font-style: italic;
-    }
-    
-    @media (max-width: 480px) {
-        .code-block pre {
-            padding: 16px 14px;
-        }
-        .code-block pre code {
-            font-size: 13px;
-            line-height: 1.8;
-        }
-        .code-header {
-            padding: 10px 14px;
-        }
-        .code-header span:first-child {
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
             font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-        .code-header span:last-child {
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
         }
-    }
-    
-    /* ===== TABLE ===== */
-    .cyber-post-wrapper table {
-        width: 100%;
-        border-collapse: collapse;
-        background: #0a0a0a !important;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        margin: 18px 0 25px;
-    }
-    
-    .cyber-post-wrapper table thead tr {
-        background: #00ff88 !important;
-    }
-    
-    .cyber-post-wrapper table thead tr th {
-        padding: 14px 20px;
-        text-align: left;
-        font-weight: 700;
-        font-size: 15px;
-        color: #000000 !important;
-    }
-    
-    .cyber-post-wrapper table tbody tr {
-        border-bottom: 1px solid rgba(0, 255, 136, 0.04);
-    }
-    
-    .cyber-post-wrapper table tbody tr:last-child {
-        border-bottom: none;
-    }
-    
-    .cyber-post-wrapper table tbody tr td {
-        padding: 12px 20px;
-        color: #b0b8c8 !important;
-        font-size: 15px;
-    }
-    
-    .cyber-post-wrapper table tbody tr td:first-child {
-        color: #00ff88 !important;
-        font-family: 'Courier New', monospace;
-        font-weight: 600;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper table thead tr th {
-            padding: 10px 14px;
-            font-size: 13px;
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
         }
-        .cyber-post-wrapper table tbody tr td {
-            padding: 10px 14px;
-            font-size: 13px;
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper table thead tr th,
-        .cyber-post-wrapper table tbody tr td {
-            padding: 8px 10px;
-            font-size: 12px;
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
         }
-        .cyber-post-wrapper table {
-            font-size: 12px;
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
         }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #00ff88;
-        color: #00ff88 !important;
-        background: rgba(0, 255, 136, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
         }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
         }
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 217, 255, 0.05));
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    .book-highlight .highlight-title {
-        color: #00ff88;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .book-highlight p {
-            font-size: 14px;
-        }
-        .book-highlight .highlight-title {
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
             font-size: 16px;
         }
-    }
-    
-    /* ===== NIKTO POWER BOX ===== */
-    .nikto-power-box {
-        background: rgba(0, 255, 136, 0.03);
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .nikto-power-box .big-text {
-        color: #00ff88;
-        font-weight: 900;
-        font-size: 22px;
-        letter-spacing: 1px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    .nikto-power-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-    }
-    
-    @media (max-width: 480px) {
-        .nikto-power-box {
-            padding: 16px 16px;
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
         }
-        .nikto-power-box .big-text {
-            font-size: 17px;
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
+            margin-bottom: 14px;
         }
-        .nikto-power-box p {
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
             font-size: 14px;
         }
-    }
-    
-    /* ===== INFO BOX ===== */
-    .info-box {
-        background: rgba(0, 217, 255, 0.05);
-        border-left: 5px solid #00d9ff;
-        padding: 18px 24px;
-        margin: 16px 0 22px;
-        border-radius: 0 10px 10px 0;
-    }
-    
-    .info-box p {
-        color: #00d9ff !important;
-        font-size: 15px;
-        margin: 0 !important;
-    }
-    
-    @media (max-width: 480px) {
-        .info-box {
-            padding: 14px 16px;
+
+        ol {
+            counter-reset: item;
         }
-        .info-box p {
-            font-size: 13.5px;
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
         }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code:not(pre code) {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #00ff88;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code:not(pre code) {
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 13px;
-            padding: 1px 8px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
         }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-    
-    /* ===== LINK STYLES ===== */
-    .cyber-post-wrapper a {
-        color: #00ff88;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .cyber-post-wrapper a:hover {
-        color: #00d9ff;
-        text-decoration: underline;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .mt-10 {
-        margin-top: 10px;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
 
-    <div class="cyber-content">
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">🌐 Web Vulnerability Scanner</div>
-            <h1 class="post-title-cyber">The Comprehensive Guide to <strong>Nikto Tools in Kali Linux</strong></h1>
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+        .cls { color: #ffb86c; font-weight: 600; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .page-footer a {
+            border-bottom: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Welcome to this complete reference guide for Nikto, the powerful web server vulnerability scanner that comes pre-installed in Kali Linux. This book is structured to take you from understanding Nikto's core concepts through advanced scanning techniques, interpretation of results, and professional reporting strategies.
-        </p>
-        <p>
-            Whether you are a security professional, penetration tester, or cybersecurity student, the tools and techniques covered in this guide will empower you to identify and document web server vulnerabilities effectively.
-        </p>
-        <p>
-            Before diving into the tool's usage, it is essential to understand Nikto's role within the Kali Linux penetration testing arsenal.
+        <h1>Nikto <span class="highlight">Tools</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to Nikto — the open-source web server scanner. 
+            From installation and basic scans to advanced tuning and integration with other tools.
         </p>
 
-        <!-- ===== NIKTO POWER BOX ===== -->
-        <div class="nikto-power-box">
-            <p class="big-text">$ nikto -h http://target.com</p>
-            <p style="color:#b0b8c8;">
-                <strong style="color:#00ff88;">Web Server Vulnerability Scanner</strong> — Detect misconfigurations, outdated components, and sensitive files!
-            </p>
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>18 min</strong></span></div>
+            <div class="meta-item"><span class="ico">🕷️</span> <span>Category: <strong>Security Tools</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Intermediate</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
         </div>
+    </header>
 
-        <!-- ===== FEATURED IMAGES WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0H6VKKCQC" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguAHhJzqhXxdEJuAXTFRpvqWVzL-t1CjmfYOUIZMYAs-IDBcbhPCQOF3ghzyUGvdHjV8zwNEe_N8da-RwWvfBXxyLFWBbaJu69GZ1ttHct9BUkEQ-Q1OBJ1x1fH2KqxU-BKhq2U1nVDV3nsNjGlnwv3XPgD3MgYAH-SOFqeZWaP2ygrDzdlvKGaTOuvxLt/s320/nikto_book_cover.png" 
-                         alt="Nikto Tools Book"/>
-                </a>
-                
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#why"><span class="num">02</span> Why Nikto?</a></li>
+            <li><a href="#install"><span class="num">03</span> Installation</a></li>
+            <li><a href="#basics"><span class="num">04</span> Basic Syntax</a></li>
+            <li><a href="#first"><span class="num">05</span> Your First Scan</a></li>
+            <li><a href="#options"><span class="num">06</span> Core Options</a></li>
+            <li><a href="#tuning"><span class="num">07</span> Tuning &amp; Filters</a></li>
+            <li><a href="#auth"><span class="num">08</span> Authentication Scans</a></li>
+            <li><a href="#output"><span class="num">09</span> Output Formats</a></li>
+            <li><a href="#evasion"><span class="num">10</span> IDS Evasion</a></li>
+            <li><a href="#advanced"><span class="num">11</span> Advanced Usage</a></li>
+            <li><a href="#workflow"><span class="num">12</span> Integration Workflow</a></li>
+            <li><a href="#best"><span class="num">13</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">14</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">15</span> Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">🕷️</span>
+            What Is Nikto?
+        </h2>
+        <p>
+            <strong>Nikto</strong> is an open-source <em>web server scanner</em> created by Chris Sullo in 2000. It's one of the oldest and most widely used web vulnerability scanners in the security industry. Written in Perl, Nikto performs comprehensive tests against web servers for multiple items, including over <strong>6,700 potentially dangerous files/programs</strong>, outdated versions of over <strong>1,250 servers</strong>, and version-specific problems on over <strong>270 servers</strong>.
+        </p>
+        <p>
+            Unlike Burp Suite or OWASP ZAP which are full-blown web application testing platforms, Nikto focuses on <strong>server-level scanning</strong>. It checks for:
+        </p>
+        <ul>
+            <li><strong>Dangerous files</strong> — backup files, config files, admin panels</li>
+            <li><strong>Default credentials</strong> — commonly weak admin passwords</li>
+            <li><strong>Outdated software</strong> — known vulnerable server versions</li>
+            <li><strong>Misconfigurations</strong> — exposed directories, wrong permissions</li>
+            <li><strong>Server headers</strong> — info leakage in HTTP responses</li>
+            <li><strong>Common CVEs</strong> — associated with detected server software</li>
+        </ul>
+        <p>
+            For ethical hackers, Nikto is a <strong>quick-win tool</strong>. It's fast, easy to use, and often finds low-hanging fruit within seconds of starting a scan. It's particularly useful during the early reconnaissance phase of a web pentest.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> Nikto is <strong>not stealthy</strong>. It sends thousands of requests and will appear in server logs immediately. Use it on systems you're authorized to test.
+        </div>
+    </section>
+
+    <!-- ===== 02 WHY ===== -->
+    <section class="section" id="why">
+        <span class="section-number">02 · WHY NIKTO</span>
+        <h2 class="section-title">
+            <span class="icon">💡</span>
+            Why Ethical Hackers Use Nikto
+        </h2>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">⚡</span>
+                <h4>Fast Recon</h4>
+                <p>Scan a web server in seconds — find quick wins before deeper testing.</p>
             </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H6VKKCQC" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Server-Focused</h4>
+                <p>Complements app-level scanners by focusing on server misconfigs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📚</span>
+                <h4>6,700+ Signatures</h4>
+                <p>Huge database of dangerous files, outdated software, and CVEs.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔍</span>
+                <h4>Info Leakage</h4>
+                <p>Detects server headers, version banners, and exposed files.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>Easy Integration</h4>
+                <p>Works with Nmap, Metasploit, Burp, and custom scripts.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🆓</span>
+                <h4>Free &amp; Open Source</h4>
+                <p>No license required — included on Kali Linux by default.</p>
             </div>
         </div>
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> Nikto finds the easy stuff — the stuff that shouldn't be there in the first place. It's the "first pass" scanner of any web pentest.
+        </div>
+    </section>
 
-        <hr/>
+    <!-- ===== 03 INSTALL ===== -->
+    <section class="section" id="install">
+        <span class="section-number">03 · INSTALLATION</span>
+        <h2 class="section-title">
+            <span class="icon">⬇️</span>
+            Installing Nikto
+        </h2>
 
-        <!-- ===== WHAT IS NIKTO ===== -->
-        <h4>🔍 What is Nikto?</h4>
+        <h3>Option 1: Kali Linux (Pre-installed)</h3>
+        <p>Nikto comes pre-installed on Kali Linux. Just run:</p>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">nikto</span> -Version</code>
+        </div>
+
+        <h3>Option 2: Install via APT</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">sudo</span> apt update
+<span class="cmd">sudo</span> apt install nikto</code>
+        </div>
+
+        <h3>Option 3: Install from Source (GitHub)</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">git</span> clone https://github.com/sullo/nikto.git
+<span class="cmd">cd</span> nikto/program
+
+<span class="cmt"># Run directly from source</span>
+<span class="cmd">perl</span> nikto.pl -h target.com
+
+<span class="cmt"># Or install system-wide</span>
+<span class="cmd">sudo</span> cp nikto.pl /usr/local/bin/nikto
+<span class="cmd">sudo</span> chmod</span> +x /usr/local/bin/nikto</code>
+        </div>
+
+        <h3>Option 4: Docker</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">docker</span> run --rm sullo/nikto -h target.com</code>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> Always run <code>nikto -update</code> before scanning. This fetches the latest vulnerability database — new checks are added regularly.
+        </div>
+    </section>
+
+    <!-- ===== 04 BASICS ===== -->
+    <section class="section" id="basics">
+        <span class="section-number">04 · BASIC SYNTAX</span>
+        <h2 class="section-title">
+            <span class="icon">📝</span>
+            Basic Nikto Syntax
+        </h2>
+
+        <div class="code-block" data-lang="bash">
+<code>nikto -h &lt;host&gt; [options]</code>
+        </div>
+
+        <h3>Essential Flags</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Flag</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>-h &lt;host&gt;</code></td><td>Target host or URL</td></tr>
+                    <tr><td><code>-p &lt;port&gt;</code></td><td>Target port (default: 80)</td></tr>
+                    <tr><td><code>-ssl</code></td><td>Force SSL mode (HTTPS)</td></tr>
+                    <tr><td><code>-o &lt;file&gt;</code></td><td>Output file</td></tr>
+                    <tr><td><code>-F &lt;format&gt;</code></td><td>Output format (csv, html, msf, txt, xml)</td></tr>
+                    <tr><td><code>-Tuning &lt;x&gt;</code></td><td>Tune scan behavior</td></tr>
+                    <tr><td><code>-update</code></td><td>Update plugin database</td></tr>
+                    <tr><td><code>-Version</code></td><td>Show version</td></tr>
+                    <tr><td><code>-Help</code></td><td>Show all options</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Basic Scan Examples</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Scan a single host (HTTP)</span>
+<span class="cmd">nikto</span> -h target.com
+
+<span class="cmt"># Scan HTTPS</span>
+<span class="cmd">nikto</span> -h https://target.com
+
+<span class="cmt"># Scan on custom port</span>
+<span class="cmd">nikto</span> -h target.com -p 8080
+
+<span class="cmt"># Scan by IP</span>
+<span class="cmd">nikto</span> -h 192.168.1.100
+
+<span class="cmt"># Scan multiple ports</span>
+<span class="cmd">nikto</span> -h target.com -p 80,443,8080,8443</code>
+        </div>
+    </section>
+
+    <!-- ===== 05 FIRST ===== -->
+    <section class="section" id="first">
+        <span class="section-number">05 · YOUR FIRST SCAN</span>
+        <h2 class="section-title">
+            <span class="icon">🚀</span>
+            Running Your First Scan
+        </h2>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Basic scan against Nmap's test server</span>
+<span class="cmd">nikto</span> -h scanme.nmap.org
+
+<span class="cmt"># Or scan a local DVWA</span>
+<span class="cmd">nikto</span> -h http://localhost:80
+
+<span class="cmt"># Save output to HTML report</span>
+<span class="cmd">nikto</span> -h target.com -o report.html -F html
+
+<span class="cmt"># Save as CSV for spreadsheets</span>
+<span class="cmd">nikto</span> -h target.com -o report.csv -F csv</code>
+        </div>
+
+        <p>Sample output looks like this:</p>
+
+        <div class="code-block" data-lang="text">
+<code>- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          192.168.1.100
++ Target Hostname:    target.com
++ Target Port:        80
++ Start Time:         2025-01-15 14:32:00
+---------------------------------------------------------------------------
++ Server: Apache/2.4.41 (Ubuntu)
++ /: The anti-clickjacking X-Frame-Options header is not present.
++ /: The X-Content-Type-Options header is not set.
++ /robots.txt: Entry '/admin/' is returned by robots.txt.
++ /admin/: Admin login page found.
++ /backup/: Directory indexing enabled.
++ /phpMyAdmin/: phpMyAdmin directory found.
++ /server-status: Server status page exposed.
++ OSVDB-3268: /icons/: Directory indexing found.
++ Apache/2.4.41 appears to be outdated (current is at least 2.4.58).
++ /index.php: PHP 7.2.34 appears to be outdated.</code>
+        </div>
+
+        <div class="callout">
+            <strong>💡 Reading the Output:</strong> Each line starting with <code>+</code> is a finding. Focus on high-impact items like admin panels, backup directories, exposed config files, and outdated software.
+        </div>
+    </section>
+
+    <!-- ===== 06 OPTIONS ===== -->
+    <section class="section" id="options">
+        <span class="section-number">06 · CORE OPTIONS</span>
+        <h2 class="section-title">
+            <span class="icon">⚙️</span>
+            Core Nikto Options
+        </h2>
+
+        <h3>Target Specification</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Single host</span>
+<span class="cmd">nikto</span> -h target.com
+
+<span class="cmt"># Multiple hosts from file</span>
+<span class="cmd">nikto</span> -h targets.txt
+
+<span class="cmt"># Multiple hosts inline</span>
+<span class="cmd">nikto</span> -h target1.com,target2.com
+
+<span class="cmt"># With specific port</span>
+<span class="cmd">nikto</span> -h target.com -p 8443 -ssl
+
+<span class="cmt"># Using a proxy</span>
+<span class="cmd">nikto</span> -h target.com -useproxy http://127.0.0.1:8080</code>
+        </div>
+
+        <h3>Custom Headers &amp; Cookies</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Custom User-Agent</span>
+<span class="cmd">nikto</span> -h target.com -useragent <span class="str">"Mozilla/5.0 (Custom)"</span>
+
+<span class="cmt"># With cookie (authenticated scan)</span>
+<span class="cmd">nikto</span> -h target.com -cookies <span class="str">"session=abc123; auth=xyz"</span>
+
+<span class="cmt"># Custom HTTP headers</span>
+<span class="cmd">nikto</span> -h target.com -add-header <span class="str">"Authorization: Bearer token123"</span>
+
+<span class="cmt"># With a referer</span>
+<span class="cmd">nikto</span> -h target.com -Referer http://google.com</code>
+        </div>
+
+        <h3>Scan Control</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Set maximum time (seconds)</span>
+<span class="cmd">nikto</span> -h target.com -maxtime 300
+
+<span class="cmt"># Set per-host timeout</span>
+<span class="cmd">nikto</span> -h target.com -timeout 10
+
+<span class="cmt"># Delay between requests (evasion)</span>
+<span class="cmd">nikto</span> -h target.com -Pause 2
+
+<span class="cmt"># Set maximum execution time per host</span>
+<span class="cmd">nikto</span> -h target.com -maxtime 1h
+
+<span class="cmt"># Display progress</span>
+<span class="cmd">nikto</span> -h target.com -Display V
+
+<span class="cmt"># Don't show 404s</span>
+<span class="cmd">nikto</span> -h target.com -no404</code>
+        </div>
+
+        <h3>Authentication</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># HTTP Basic Auth</span>
+<span class="cmd">nikto</span> -h target.com -id admin:password
+
+<span class="cmt"># Form-based auth (requires more setup)</span>
+<span class="cmd">nikto</span> -h target.com -cookies <span class="str">"PHPSESSID=abc123"</span>
+
+<span class="cmt"># Client certificate</span>
+<span class="cmd">nikto</span> -h target.com -cert client.crt -key client.key</code>
+        </div>
+    </section>
+
+    <!-- ===== 07 TUNING ===== -->
+    <section class="section" id="tuning">
+        <span class="section-number">07 · TUNING &amp; FILTERS</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            Tuning Scan Behavior
+        </h2>
         <p>
-            Nikto is an open-source web server and CGI scanner written in Perl, using rfp's LibWhisker to perform fast security or informational checks. Initially released in 2001, Nikto has evolved significantly and remains one of the most popular vulnerability scanners due to its open-source nature and rich feature set.
+            The <code>-Tuning</code> option lets you control exactly which types of tests Nikto performs. Useful for reducing scan time and noise.
         </p>
 
-        <!-- ===== CORE CAPABILITIES ===== -->
-        <h4>⚡ Core Capabilities</h4>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Tuning Value</th><th>Scan Type</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>1</code></td><td>Interesting File / Seen in logs</td></tr>
+                    <tr><td><code>2</code></td><td>Misconfiguration / Default File</td></tr>
+                    <tr><td><code>3</code></td><td>Information Disclosure</td></tr>
+                    <tr><td><code>4</code></td><td>Injection (XSS/Script/HTML)</td></tr>
+                    <tr><td><code>5</code></td><td>Remote File Retrieval – Inside Web Root</td></tr>
+                    <tr><td><code>6</code></td><td>Denial of Service</td></tr>
+                    <tr><td><code>7</code></td><td>Remote File Retrieval – Server Wide</td></tr>
+                    <tr><td><code>8</code></td><td>Command Execution / Remote Shell</td></tr>
+                    <tr><td><code>9</code></td><td>SQL Injection</td></tr>
+                    <tr><td><code>0</code></td><td>File Upload</td></tr>
+                    <tr><td><code>a</code></td><td>Authentication Bypass</td></tr>
+                    <tr><td><code>b</code></td><td>Software Identification</td></tr>
+                    <tr><td><code>c</code></td><td>Remote Source Inclusion</td></tr>
+                    <tr><td><code>x</code></td><td>Reverse Tuning (exclude listed)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Tuning Examples</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Only check for interesting files (fastest)</span>
+<span class="cmd">nikto</span> -h target.com -Tuning 1
+
+<span class="cmt"># Check for info disclosure + misconfigurations</span>
+<span class="cmd">nikto</span> -h target.com -Tuning 23
+
+<span class="cmt"># Run all tuning types (default behavior)</span>
+<span class="cmd">nikto</span> -h target.com -Tuning 1234567890abc
+
+<span class="cmt"># Everything EXCEPT DoS tests (safest)</span>
+<span class="cmd">nikto</span> -h target.com -Tuning x6
+
+<span class="cmt"># Full scan with all checks</span>
+<span class="cmd">nikto</span> -h target.com -Tuning 1234567890abcx</code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> Tuning <code>6</code> (Denial of Service) can crash systems. Never enable it on production servers without explicit permission.
+        </div>
+    </section>
+
+    <!-- ===== 08 AUTH ===== -->
+    <section class="section" id="auth">
+        <span class="section-number">08 · AUTHENTICATION</span>
+        <h2 class="section-title">
+            <span class="icon">🔐</span>
+            Authenticated Scans
+        </h2>
         <p>
-            Nikto is capable of performing assessments on all types of web servers and is not application-specific (unlike tools such as WPScan). Its primary functions include:
+            Nikto can scan behind authentication if you provide credentials. This unlocks far more findings — many vulnerabilities only appear after login.
         </p>
+
+        <h3>HTTP Basic Auth</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">nikto</span> -h target.com -id admin:secretpass</code>
+        </div>
+
+        <h3>Cookie-Based Auth (Form Login)</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Step 1: Log in to the app via browser</span>
+<span class="cmt"># Step 2: Copy the session cookie from DevTools</span>
+<span class="cmt"># Step 3: Pass it to Nikto</span>
+<span class="cmd">nikto</span> -h target.com -cookies <span class="str">"PHPSESSID=abc123def456; auth=xyz789"</span></code>
+        </div>
+
+        <h3>Custom Headers (Bearer Tokens)</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmd">nikto</span> -h target.com \
+    -add-header <span class="str">"Authorization: Bearer eyJhbGc..."</span> \
+    -add-header <span class="str">"X-API-Key: your-api-key"</span></code>
+        </div>
+
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> Use browser DevTools → Network tab to inspect the login request. Copy the cookie or Authorization header, then pass it to Nikto.
+        </div>
+    </section>
+
+    <!-- ===== 09 OUTPUT ===== -->
+    <section class="section" id="output">
+        <span class="section-number">09 · OUTPUT FORMATS</span>
+        <h2 class="section-title">
+            <span class="icon">📊</span>
+            Output Formats
+        </h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Format</th><th>Use Case</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>csv</code></td><td>Spreadsheet / Excel import</td></tr>
+                    <tr><td><code>html</code></td><td>Shareable browser report</td></tr>
+                    <tr><td><code>msf+</code></td><td>Metasploit-compatible format</td></tr>
+                    <tr><td><code>nbe</code></td><td>Nessus NBE format</td></tr>
+                    <tr><td><code>txt</code></td><td>Plain text (default)</td></tr>
+                    <tr><td><code>xml</code></td><td>Machine-readable</td></tr>
+                    <tr><td><code>json</code></td><td>JSON (via plugin)</td></tr>
+                    <tr><td><code>sql</code></td><td>SQL insert statements</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Output Examples</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># HTML report</span>
+<span class="cmd">nikto</span> -h target.com -o report.html -F html
+
+<span class="cmt"># CSV for Excel</span>
+<span class="cmd">nikto</span> -h target.com -o report.csv -F csv
+
+<span class="cmt"># XML for parsing</span>
+<span class="cmd">nikto</span> -h target.com -o report.xml -F xml
+
+<span class="cmt"># Metasploit format</span>
+<span class="cmd">nikto</span> -h target.com -o report.msf -F msf+
+
+<span class="cmt"># All findings + verbose</span>
+<span class="cmd">nikto</span> -h target.com -o full.txt -Display V -no404</code>
+        </div>
+
+        <h3>Display Options (-Display)</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Display codes:</span>
+<span class="cmt"># 1 = Show redirects</span>
+<span class="cmt"># 2 = Show cookies received</span>
+<span class="cmt"># 3 = Show all 200/OK responses</span>
+<span class="cmt"># 4 = Show URLs requiring authentication</span>
+<span class="cmt"># D = Debug output</span>
+<span class="cmt"># E = Display HTTP errors</span>
+<span class="cmt"># P = Print progress</span>
+<span class="cmt"># V = Verbose output</span>
+
+<span class="cmd">nikto</span> -h target.com -Display V
+<span class="cmd">nikto</span> -h target.com -Display 12P</code>
+        </div>
+    </section>
+
+    <!-- ===== 10 EVASION ===== -->
+    <section class="section" id="evasion">
+        <span class="section-number">10 · IDS EVASION</span>
+        <h2 class="section-title">
+            <span class="icon">🕵️</span>
+            IDS Evasion Techniques
+        </h2>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Use random User-Agents</span>
+<span class="cmd">nikto</span> -h target.com -useragent <span class="str">"Mozilla/5.0 (Windows NT 10.0; Win64; x64)"</span>
+
+<span class="cmt"># Randomize URL encoding (evasion ID 1-8)</span>
+<span class="cmd">nikto</span> -h target.com -evasion 1
+
+<span class="cmt"># Combination of evasion techniques</span>
+<span class="cmd">nikto</span> -h target.com -evasion 1234
+
+<span class="cmt"># Add delays between requests</span>
+<span class="cmd">nikto</span> -h target.com -Pause 3
+
+<span class="cmt"># Use a proxy chain (Burp, Tor, etc.)</span>
+<span class="cmd">nikto</span> -h target.com -useproxy http://127.0.0.1:8080
+
+<span class="cmt"># Custom user agent + evasion + proxy</span>
+<span class="cmd">nikto</span> -h target.com -useragent <span class="str">"Mozilla/5.0"</span> -evasion 123 -useproxy http://127.0.0.1:8080</code>
+        </div>
+
+        <h3>Evasion IDs</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Technique</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Random URI encoding (non-UTF8)</td></tr>
+                    <tr><td>2</td><td>Directory self-reference (/./)</td></tr>
+                    <tr><td>3</td><td>Premature URL ending</td></tr>
+                    <tr><td>4</td><td>Prepend long random string</td></tr>
+                    <tr><td>5</td><td>Fake parameter</td></tr>
+                    <tr><td>6</td><td>TAB as request spacer</td></tr>
+                    <tr><td>7</td><td>Change URL case</td></tr>
+                    <tr><td>8</td><td>Use Windows directory separator (\)</td></tr>
+                    <tr><td>A</td><td>Use a carriage return / line feed</td></tr>
+                    <tr><td>B</td><td>Use binary value 0x0B as request spacer</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> Evasion techniques may cause errors or false positives. Use only when you need to bypass WAF/IDS during authorized testing.
+        </div>
+    </section>
+
+    <!-- ===== 11 ADVANCED ===== -->
+    <section class="section" id="advanced">
+        <span class="section-number">11 · ADVANCED USAGE</span>
+        <h2 class="section-title">
+            <span class="icon">🚀</span>
+            Advanced Techniques
+        </h2>
+
+        <h3>Mutation Techniques</h3>
+        <p>Nikto supports URL mutation techniques used by other scanners:</p>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Enable mutation techniques</span>
+<span class="cmd">nikto</span> -h target.com -mutate 1,2,3
+
+<span class="cmt"># All mutations</span>
+<span class="cmd">nikto</span> -h target.com -mutate 1,2,3,4,5,6
+
+<span class="cmt"># Mutate only specific directory</span>
+<span class="cmd">nikto</span> -h target.com -mutate /admin/</code>
+        </div>
+
+        <h3>Nikto Databases</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Use specific database files</span>
+<span class="cmd">nikto</span> -h target.com -dbcheck
+
+<span class="cmt"># Check database consistency</span>
+<span class="cmd">nikto</span> -h target.com -dbcheck
+
+<span class="cmt"># Database locations:</span>
+<span class="cmt"># /var/lib/nikto/databases/</span>
+<span class="cmt"># /usr/share/nikto/databases/</span>
+
+<span class="cmt"># Database files:
+# - db_404_strings
+# - db_dictionary
+# - db_favicon
+# - db_headers
+# - db_httpoptions
+# - db_realms
+# - db_server_msgs
+# - db_tests</span></code>
+        </div>
+
+        <h3>Scanning Through Burp</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Route Nikto traffic through Burp Suite</span>
+<span class="cmd">nikto</span> -h target.com -useproxy http://127.0.0.1:8080
+
+<span class="cmt"># Now every Nikto request appears in Burp's HTTP history
+# You can modify, replay, and analyze them</span></code>
+        </div>
+
+        <h3>Bulk Scanning</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Scan multiple targets from a file</span>
+<span class="cmd">nikto</span> -h targets.txt -o results.txt
+
+<span class="cmt"># Combine with Nmap to discover web servers</span>
+<span class="cmd">nmap</span> -p 80,443,8080,8443 --open 192.168.1.0/24 -oG - | \
+    <span class="cmd">grep</span> <span class="str">"open"</span> | <span class="cmd">awk</span> <span class="str">'{print $2}'</span> &gt; web_targets.txt
+<span class="cmd">nikto</span> -h web_targets.txt -o bulk_report.html -F html</code>
+        </div>
+
+        <h3>Automated Pipeline</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt">#!/bin/bash
+# Full web recon pipeline</span>
+
+<span class="var">TARGET</span>=<span class="str">"$1"</span>
+
+<span class="cmt"># 1. Nmap discovery</span>
+<span class="cmd">nmap</span> -sV -p 80,443,8080,8443 <span class="var">$TARGET</span> -oA nmap_scan
+
+<span class="cmt"># 2. Nikto scan</span>
+<span class="cmd">nikto</span> -h <span class="var">$TARGET</span> -o nikto_report.html -F html
+
+<span class="cmt"># 3. Extract URLs from Nikto</span>
+<span class="cmd">grep</span> -oE <span class="str">'https?://[^ ]+'</span> nikto_report.html | <span class="cmd">sort</span> -u &gt; urls.txt
+
+<span class="cmt"># 4. Feed URLs to other tools</span>
+<span class="cmd">cat</span> urls.txt | <span class="cmd">while</span> read url; <span class="cmd">do</span>
+    <span class="cmd">gobuster</span> dir -u <span class="var">$url</span> -w /usr/share/wordlists/dirb/common.txt
+<span class="cmd">done</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 12 WORKFLOW ===== -->
+    <section class="section" id="workflow">
+        <span class="section-number">12 · INTEGRATION</span>
+        <h2 class="section-title">
+            <span class="icon">🔄</span>
+            Nikto in the Pentest Workflow
+        </h2>
+
         <ol>
-            <li><strong style="color:#00ff88;">Detecting Sensitive Files:</strong> Identifying files that should not be publicly accessible</li>
-            <li><strong style="color:#00ff88;">Identifying Outdated Components:</strong> Finding vulnerable web server installs, outdated Apache, Nginx, Django, or Flask versions</li>
-            <li><strong style="color:#00ff88;">Configuration Misdetection:</strong> Uncovering issues like directory indexing, missing security headers, and CGI script vulnerabilities</li>
+            <li><strong>Reconnaissance</strong> — Find web servers with Nmap</li>
+            <li><strong>Nikto scan</strong> — Quick first pass for misconfigs and exposed files</li>
+            <li><strong>Burp Suite</strong> — Deeper app-level testing based on Nikto findings</li>
+            <li><strong>Gobuster/Dirb</strong> — Brute-force directories Nikto hinted at</li>
+            <li><strong>Manual testing</strong> — Verify findings and test logic flaws</li>
+            <li><strong>Metasploit</strong> — Exploit verified vulnerabilities</li>
+            <li><strong>Reporting</strong> — Combine Nikto output with other findings</li>
         </ol>
 
-        <!-- ===== WHY NIKTO MATTERS ===== -->
-        <h4>🎯 Why Nikto Matters in the Real World</h4>
-        <div class="info-box">
-            <p>Misconfigurations and outdated web components are among the most common entry points for attackers. Missing security headers can make applications easier to exploit, exposed directories can leak sensitive information, and unpatched services often map directly to known exploits. Nikto provides a quick baseline assessment of these risks.</p>
+        <h3>Nikto + Nmap Example</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Step 1: Discover web servers</span>
+<span class="cmd">nmap</span> -p 80,443,8080,8443 --open 192.168.1.0/24 -oG web_servers.gnmap
+
+<span class="cmt"># Step 2: Extract IPs with web ports open</span>
+<span class="cmd">grep</span> <span class="str">"80/open\|443/open\|8080/open\|8443/open"</span> web_servers.gnmap | \
+    <span class="cmd">awk</span> <span class="str">'{print $2}'</span> &gt; live_web.txt
+
+<span class="cmt"># Step 3: Run Nikto on each</span>
+<span class="cmd">while</span> read ip; <span class="cmd">do</span>
+    <span class="cmd">nikto</span> -h <span class="var">$ip</span> -o nikto_<span class="var">$ip</span>.html -F html
+<span class="cmd">done</span> &lt; live_web.txt
+
+<span class="cmt"># Step 4: Combine reports</span>
+<span class="cmd">cat</span> nikto_*.html &gt; all_scans.html</code>
         </div>
 
-        <hr/>
+        <h3>Nikto + Metasploit Integration</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Save in Metasploit-compatible format</span>
+<span class="cmd">nikto</span> -h target.com -o nikto.msf -F msf+
 
-        <!-- ===== INSTALLATION ===== -->
-        <h4>📥 Installation</h4>
+<span class="cmt"># Import into Metasploit</span>
+msf6 &gt; <span class="cmd">db_import</span> nikto.msf
+
+<span class="cmt"># Now all Nikto findings appear in Metasploit's database
+# View with:</span>
+msf6 &gt; <span class="cmd">vulns</span>
+msf6 &gt; <span class="cmd">hosts</span>
+msf6 &gt; <span class="cmd">services</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 13 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">13 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Nikto Best Practices
+        </h2>
+        <ol>
+            <li><strong>Update before scanning</strong> — Run <code>nikto -update</code> first.</li>
+            <li><strong>Start with <code>-Tuning 1</code></strong> — Fastest scan for quick wins.</li>
+            <li><strong>Use <code>-Display V</code></strong> — Verbose output shows everything.</li>
+            <li><strong>Save output</strong> — Always use <code>-o</code> for reports.</li>
+            <li><strong>Scan through Burp</strong> — <code>-useproxy http://127.0.0.1:8080</code> for traffic analysis.</li>
+            <li><strong>Authenticated scans are better</strong> — Pass cookies/headers for deeper testing.</li>
+            <li><strong>Never enable DoS tests</strong> — <code>-Tuning 6</code> can crash systems.</li>
+            <li><strong>Verify findings manually</strong> — Nikto reports many false positives.</li>
+            <li><strong>Combine with other tools</strong> — Nikto alone is not enough.</li>
+            <li><strong>Respect rate limits</strong> — Use <code>-Pause</code> on production systems.</li>
+        </ol>
+
+        <h3>Common False Positives</h3>
+        <ul>
+            <li><strong>Directory indexing</strong> — Sometimes intentional</li>
+            <li><strong>Outdated versions</strong> — Check actual patch level</li>
+            <li><strong>Exposed /admin/</strong> — May be intentional admin panel</li>
+            <li><strong>Missing headers</strong> — Often low priority</li>
+            <li><strong>robots.txt entries</strong> — Sometimes decoys or intentional</li>
+        </ul>
+    </section>
+
+    <!-- ===== 14 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">14 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Nikto performs <strong>thousands of requests per scan</strong> and can trigger alerts, block access, or even crash systems. Using it against servers you don't own or have permission to test is a <strong>serious crime</strong>.
+        </div>
+
+        <h3>Before You Scan</h3>
+        <ul>
+            <li><strong>Get written authorization</strong> — Signed scope document.</li>
+            <li><strong>Only scan approved domains</strong> — Never stray from scope.</li>
+            <li><strong>Schedule scans off-peak</strong> — Avoid disrupting users.</li>
+            <li><strong>Disable DoS tests</strong> — Unless explicitly authorized.</li>
+            <li><strong>Use rate limiting</strong> — <code>-Pause</code> and <code>-maxtime</code>.</li>
+            <li><strong>Warn the SOC team</strong> — So they don't block you or panic.</li>
+        </ul>
+
+        <h3>Legal Practice Environments</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🐐</span>
+                <h4>OWASP Juice Shop</h4>
+                <p>Modern vulnerable web app for practice.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🕸️</span>
+                <h4>DVWA</h4>
+                <p>Damn Vulnerable Web App — classic Nikto target.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🧪</span>
+                <h4>bWAPP</h4>
+                <p>Buggy Web Application — deliberately vulnerable.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>scanme.nmap.org</h4>
+                <p>Nmap's official legal test server.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🏠</span>
+                <h4>Your Own Web Server</h4>
+                <p>Spin up Apache/Nginx locally and scan.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">☁️</span>
+                <h4>VulnHub / HTB</h4>
+                <p>Downloadable VMs with web servers to scan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 15 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">15 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
         <p>
-            Nikto comes pre-installed on the latest versions of Kali Linux. To verify if it is installed and check the version:
-        </p>
-        <script async="async" data-cfasync="false" src="https://mergerindirect.com/aa647107e47abf023a29284552085aba/invoke.js"></script>
-<div id="container-aa647107e47abf023a29284552085aba"></div>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Check Version</span>
-            </div>
-            <pre><code><span class="cmd">nikto</span> <span class="flag">-Version</span></code></pre>
-        </div>
-        <p style="color:#6a7290;font-size:14px;margin-top:-10px;">
-            This command displays the installed Nikto version, confirming it is ready for use.
-        </p>
-
-        <p><strong style="color:#00ff88;">Expected output:</strong></p>
-        <div class="code-block">
-            <div class="code-header">
-                <span>📄 Output</span>
-                <span>Version Info</span>
-            </div>
-            <pre><code><span class="output">Nikto 2.5.0 (LW 2.5)</span></code></pre>
-        </div>
-
-        <p>
-            If Nikto is not installed (e.g., on older Kali versions or other Debian-based systems), you can install it using the apt package manager:
-        </p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Install Nikto</span>
-            </div>
-            <pre><code><span class="cmd">sudo apt update && sudo apt install nikto</span></code></pre>
-        </div>
-
-        <hr/>
-
-        <!-- ===== BASIC COMMAND ===== -->
-        <h4>🚀 The Basic Command</h4>
-        <p>
-            Understanding the fundamental command structure is critical before launching your first scan.
+            <strong>Nikto</strong> is a <strong>fast, free, and effective</strong> web server scanner that belongs in every ethical hacker's toolkit. It's not fancy, it's not stealthy, and it won't find everything — but it will quickly identify the low-hanging fruit that many pentesters overlook.
         </p>
         <p>
-            The simplest Nikto scan uses the <code>-h</code> option to specify the target host:
+            Use Nikto as your <em>first-pass scanner</em>. Then dive deeper with Burp Suite, Gobuster, and manual testing. Combine Nikto findings with Nmap results and Metasploit exploitation for a complete pentest workflow.
         </p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Basic Scan</span>
-            </div>
-            <pre><code><span class="cmd">nikto</span> <span class="flag">-h</span> <span class="target">http://example.com</span></code></pre>
+        <p>
+            The learning journey:
+        </p>
+        <ol>
+            <li><strong>Learn the basics</strong> — <code>nikto -h target.com</code></li>
+            <li><strong>Master tuning</strong> — Target specific check types with <code>-Tuning</code></li>
+            <li><strong>Save reports</strong> — HTML, CSV, XML for different use cases</li>
+            <li><strong>Use authenticated scans</strong> — Deeper testing with cookies/headers</li>
+            <li><strong>Integrate with other tools</strong> — Nmap + Nikto + Burp + Metasploit</li>
+            <li><strong>Practice on legal targets</strong> — DVWA, Juice Shop, scanme.nmap.org</li>
+        </ol>
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Install Nikto on Kali, scan DVWA or bWAPP (legal test environments), and analyze each finding manually. Then chain it with Nmap and Burp for a complete workflow.
         </div>
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. 🕷️
+        </p>
+    </section>
 
-        <div class="info-box">
-            <p>💡 The target can be a domain name, dynamic DNS, or a direct IP address. You must include the protocol (<strong>http</strong> or <strong>https</strong>).</p>
-        </div>
-
-        <!-- ===== TARGET SPECIFICATION ===== -->
-        <h5>⚙️ Target Specification Options</h5>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Option</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>-h / -host / -url</td>
-                    <td>Specify the target host/URL</td>
-                </tr>
-                <tr>
-                    <td>-port</td>
-                    <td>Specify a port to use (default is 80)</td>
-                </tr>
-                <tr>
-                    <td>-ssl</td>
-                    <td>Force SSL mode on port</td>
-                </tr>
-                <tr>
-                    <td>-nossl</td>
-                    <td>Disable the use of SSL</td>
-                </tr>
-            </tbody>
-        </table>
-        <script async="async" data-cfasync="false" src="https://mergerindirect.com/aa647107e47abf023a29284552085aba/invoke.js"></script>
-<div id="container-aa647107e47abf023a29284552085aba"></div>
-
-        <h5>📌 Example: Scanning a Specific Port</h5>
-        <p><strong>To scan a server on port 8080:</strong></p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Custom Port</span>
-            </div>
-            <pre><code><span class="cmd">nikto</span> <span class="flag">-h</span> <span class="target">http://example.com</span> <span class="flag">-port</span> <span class="target">8080</span></code></pre>
-        </div>
-
-        <h5>📌 Example: Scanning Multiple Targets</h5>
-        <p><strong>Create a text file with the list of target IP addresses, then use:</strong></p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Multiple Targets</span>
-            </div>
-            <pre><code><span class="cmd">nikto</span> <span class="flag">-h</span> <span class="target">IP_list.txt</span></code></pre>
-        </div>
-
-        <div class="info-box">
-            <p>💡 This scans all the servers listed in the file.</p>
-        </div>
-
-        <div class="featured-box" style="padding:20px 24px;margin:20px 0;">
-            <div class="featured-image" style="flex-shrink:0;">
-                <a href="https://www.amazon.com/dp/B0H6VKKCQC" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo4EmG5fNJxaejxCFbwFLPb7wKwjpBavLm1YBWkvgjkPgCqSk-popnVrIVo7SeG_wBlxGo5XfhufgpXVS9NsGysyTQUaKCfIAI2W4qSH75cJso-q9Ny52SA32PCVY9cNFBK2bP-vDUHL7c-7WjC5zVpwKYrNv-uEfT6tzDOi5MnVwymwgR3TF_t_QjM2z3/s320/nikto_book_cover.png" 
-                         alt="Nikto Book" style="max-width:120px;border-radius:10px;"/>
-                </a>
-            </div>
-            <div class="featured-cta" style="flex:1;text-align:center;">
-                <p style="color:#b0b8c8;font-size:14px;margin:0 !important;">
-                    📚 <strong style="color:#ffcc00;">For Best Information</strong>
-                </p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H6VKKCQC" target="_blank" rel="noopener" 
-                   style="display:inline-block;padding:10px 30px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;transition:all 0.3s ease;margin-top:6px;">
-                    🛒 Download This Book
-                </a>
-            </div>
-        </div>
-
-        <hr/>
-
-        <!-- ===== BOOK HIGHLIGHT ===== -->
-        <div class="book-highlight">
-            <p class="highlight-title">⭐ From Nikto Beginner to Web Security Pro</p>
-            <p style="color:#b0b8c8;">
-                Master web server vulnerability scanning with one of the most trusted open-source tools!
-            </p>
-        </div>
-
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.05),rgba(0,255,136,0.05));">
-            <p class="highlight-title" style="color:#ffcc00;">🌐 Ready to Master Web Vulnerability Scanning?</p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Start your Nikto journey and uncover web server vulnerabilities like a pro!
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0H6VKKCQC" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Start your Nikto journey today — Get your copy now!
-            </p>
-        </div>
-
-        <hr/>
-
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=The%20Comprehensive%20Guide%20to%20Nikto%20Tools%20in%20Kali%20Linux%20-%20Master%20web%20server%20vulnerability%20scanning!%20%23Nikto%20%23KaliLinux%20%23CyberSecurity','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
-            </div>
-        </div>
-
-    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Nikto Tools</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Intermediate · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
